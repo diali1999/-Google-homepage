@@ -1,0 +1,136 @@
+  /* styling navlist */
+  #navlist { 
+		position: relative; 
+		width: 100%; 
+	} 
+		
+	/* styling navlist anchor element */ 
+	#navlist a { 
+    float: right;
+    color: black;
+		padding: 7px; 
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+	} 
+  
+  .navlist-left {
+    float: left;
+}
+	.navlist-right{ 
+		float:right; 
+	} 
+
+	/* hover effect of navlist anchor element */ 
+	#navlist a:hover {  
+    text-decoration: underline;
+    cursor: pointer;
+	} 
+
+  .b { 
+    padding : 8px 15px; 
+    border : none; 
+    font-size: 14px;
+    color: white; 
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 5px;
+    margin-top: 10px;
+} 
+.b:hover{
+  background-color: rgb(16, 16, 207);
+}
+  .b3 { 
+    background-color:rgb(30, 75, 223); 
+    color: white;
+    border-radius: 2px; 
+    cursor: default;
+} 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+} 
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+  li {
+      float: right;
+    }
+  .box{
+        margin: 0;
+        border-color: whitesmoke;
+    }
+  .search{
+    position: fixed;
+    width: 575px;
+    height: 40px;
+    top: 47%;
+    left: 28%;
+    border-radius: 25px;
+    border-color:whitesmoke;
+  }
+  .search:hover{
+    box-shadow: whitesmoke;
+  }
+  .searchicon{
+    position: fixed;
+    width: 20px;
+    top: 49%;
+    left: 29%;
+    cursor: default;
+  }
+  .voice{
+    position: fixed;
+    width:15px;
+    top:48.5%;
+    left:66.5%;
+  }
+  .buttons{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .button{
+    padding : 10px 10px; 
+    border : none; 
+    font-size: 15px;
+    color: black; 
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+  } 
+  .button:hover{
+    border: 1px solid rgb(184, 179, 179);
+    padding: 9px 9px;
+    
+  } 
+  .langlist{
+    font-size: 12.5px;
+    position: fixed;
+    top: 95%;
+    left: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -150px;
+    margin-left: -150px;
+    text-decoration: none;
+  }
+  .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:whitesmoke;
+  color: grey;
+  text-align: left;
+  text-decoration: none;
+  }

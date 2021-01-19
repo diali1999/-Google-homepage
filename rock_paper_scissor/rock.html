@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    function computerPlay() {
+        var random =Math.random();
+        if(random%3==0)
+        return "rock";
+        else if(random%3==1)
+        return "paper";
+        else
+        return "scissor";
+    return ;
+    }
+    var win=0;
+    var draw=0;
+    function playRound(playerSelection, computerSelection) {
+        if(playerSelection==computerSelection)
+        {
+            draw++;
+            return "Oh! It's a draw!!";
+        }
+        else if(playerSelection=="rock" && computerSelection =="paper")
+            return "You Lose! Paper beats Rock";
+        else if(playerSelection=="rock" && computerSelection =="scissor")
+        {
+            win++;
+            return "You Win! Rock beats Scissor";
+        }
+        else if(playerSelection=="paper" && computerSelection =="scissor")
+            return "You Lose! Scissor beats Paper";
+        else if(playerSelection=="scissor" && computerSelection =="rock")
+        {
+            return "You Lose! Rock beats Scissor";
+        }
+        else if(playerSelection=="scissor" && computerSelection =="paper")
+        {
+            win++;
+            return "You Win! Scissor beats Paper";
+        }
+        else if(playerSelection=="paper" && computerSelection =="rock")
+        {
+            win++;
+            return "You Win! Paper beats Rock";
+        }
+        return;
+    }
+
+    function game(){
+        var i=5;
+        while(i--)
+        {
+            let playerSelection = prompt("Enter your choice:").toLowerCase();
+            let  computerSelection=computerPlay();
+            playRound(playerSelection,computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+        }
+        return ;
+    }
+    game();
+    console.log(win);
+    if(win> 5-draw)
+            console.log("You win!!");
+            else if(win==5-draw)
+            console.log("It's a draw!!");
+            else
+            console.log("You lose!!");
+</script>
+
+</body>
+</html>

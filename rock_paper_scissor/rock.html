@@ -4,34 +4,38 @@
 
 <script>
     function computerPlay() {
-        var random =Math.random();
+        var random =Math.floor(Math.random() * Math.floor(3));
         if(random%3==0)
         return "rock";
         else if(random%3==1)
         return "paper";
-        else
         return "scissor";
-    return ;
     }
     var win=0;
-    var draw=0;
+    var lose=0;
     function playRound(playerSelection, computerSelection) {
         if(playerSelection==computerSelection)
         {
-            draw++;
             return "Oh! It's a draw!!";
         }
         else if(playerSelection=="rock" && computerSelection =="paper")
-            return "You Lose! Paper beats Rock";
+            {
+                lose++;
+                return "You Lose! Paper beats Rock";
+            }
         else if(playerSelection=="rock" && computerSelection =="scissor")
         {
             win++;
             return "You Win! Rock beats Scissor";
         }
         else if(playerSelection=="paper" && computerSelection =="scissor")
+         {
+             lose++;
             return "You Lose! Scissor beats Paper";
+         }   
         else if(playerSelection=="scissor" && computerSelection =="rock")
         {
+            lose++;
             return "You Lose! Rock beats Scissor";
         }
         else if(playerSelection=="scissor" && computerSelection =="paper")
@@ -44,7 +48,6 @@
             win++;
             return "You Win! Paper beats Rock";
         }
-        return;
     }
 
     function game(){
@@ -53,18 +56,17 @@
         {
             let playerSelection = prompt("Enter your choice:").toLowerCase();
             let  computerSelection=computerPlay();
-            playRound(playerSelection,computerSelection);
             console.log(playRound(playerSelection, computerSelection));
         }
         return ;
     }
     game();
-    if(win> 5-draw)
-            console.log("You win!!");
-            else if(win==5-draw)
-            console.log("It's a draw!!");
-            else
-            console.log("You lose!!");
+    if(win> lose)
+        console.log("Finally You Win!! Congrats!!");
+    else if(win==lose)
+        console.log("Finally It's a draw!!");
+    else
+        console.log("Finally You lose!! Game over!!");
 </script>
 
 </body>
